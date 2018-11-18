@@ -1,0 +1,51 @@
+<form style="text-align:center">
+	<!-- To see logged in doctor details after the below button is clicked-->
+	<button type="submit" ng-click="myProfile()">My Profile</button>
+	<!-- To see patient details of login doctor department after the below button is clicked-->
+	<button type="submit" ng-click="patientsList()">Patients List</button>
+	<!-- To logout after the below button is clicked-->
+	<button type="submit" ng-click="logout()" >Logout</button>
+	
+	<!-- prints the doctor Details after My profile button is clicked-->
+	<table ng-show="dtDetails" align="center" >
+			<p ng-show="dtDetails" >MyDetails</p>
+			<thead>
+				<tr>
+				<th>Full Name</th>
+				<th>Age</th>
+				<th>Specialization</th>
+				<th>Gender</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="doct in dt">
+				<td>{{doct.fullName}}</td>
+				<td>{{doct.age}}</td>
+				<td>{{doct.specialization}}</td>
+				<td>{{doct.gender}}</td>
+				</tr>
+			</tbody>
+		</table>
+	
+	<!-- Prints the patients list after Patients Lists button is clicked-->
+	<table ng-show="Plist" align="center" ng-repeat="doct in dt">
+			<p ng-show="Plist">Patients List</p>
+			<thead>
+				<tr>
+				<th>Name</th>
+				<th>Age</th>
+				<th>Mobile No</th>
+				<th>Gender</th>
+				</tr>
+			</thead>
+			<tbody ng-repeat="patient in patients| filter:doct.specialization">
+				<tr>
+				<td>{{patient.fullName}}</td>
+				<td>{{patient.age}}</td>
+				<td>{{patient.mobileNo}}</td>
+				<td>{{patient.gender}}</td>
+				</tr>
+			</tbody>
+	</table>
+	
+</form>

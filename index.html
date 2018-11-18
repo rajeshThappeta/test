@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to H-hospital</title>
+    
+    <!-- CSS for Tables -->
+    <link href="tableStyle.css" rel="stylesheet" />
+    
+    <!-- CSS for Views -->
+	<link href="view.css" rel="stylesheet" />
+	
+</head>
+
+<body ng-app="app" >
+
+<!-- Tabs to click -->
+<ul>
+<li><strong><a href="#!home">Home</a></strong><br></li>
+<li><strong><a href="#!adminLogin">Admin Login</a></strong><br></li>
+<li><strong><a href="#!doctorLogin"> Doctor Login</a></strong><br></li>
+<li><strong><a href="#!doctorRegister"> Doctor Registration</a></strong><br></li>
+<li><strong><a href="#!patientLogin"> Patient Login</a></strong><br></li>
+<li><strong><a href="#!patientRegister"> Patient Registration</a></strong><br></li>
+</ul>
+
+<!-- To changing views -->
+<div ng-view></div>
+
+<!-- scripting files import -->
+<!-- <script src="./js/angular.min.js"></script>
+<script src="./js/angular-route.js"></script> -->
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+<!-- <script src="./module/module.js"></script>
+<script src="./config/configuration.js"></script>
+ <script src="./controllers/adminLogin.js"></script>
+<script src="./controllers/doctorLogin.js"></script>
+<script src="./controllers/doctorRegister.js"></script>
+<script src="./controllers/patientLogin.js"></script>
+<script src="./controllers/patientRegister.js"></script>
+<script src="./controllers/adminHome.js"></script>
+<script src="./controllers/doctorHome.js"></script>
+<script src="./controllers/patientHome.js"></script>  --> 
+<!-- <script src="module/module.js"></script>
+ --><script src="app2.js"></script>
+
+<script src="adminLogin.js"></script>
+<script src="doctorLogin.js"></script>
+<script src="doctorRegister.js"></script>
+<script src="patientLogin.js"></script>
+<script src="patientRegister.js"></script>
+<script src="adminHome.js"></script>
+<script src="doctorHome.js"></script>
+<script src="patientHome.js"></script> 
+</body>
+
+</html>

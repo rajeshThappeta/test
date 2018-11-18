@@ -1,0 +1,48 @@
+<form style="text-align:center">
+    
+    <!-- To print doctors list -->
+	<button type="submit" ng-click="doctorsList()">Doctors List</button>
+	<!-- To print patients list -->
+	<button type="submit" ng-click="patientsList()">Patients List</button>
+	
+<!-- Patients List -->
+	<table ng-show="Plist">
+			<thead>
+				<tr>
+				<th>Full Name</th>
+				<th>Age</th>
+				<th>Mobile No</th>
+				<th>Gender</th>
+				</tr>
+			</thead>
+			<tbody ng-repeat="patient in patients">
+				<tr>
+				<td>{{patient.fullName}}</td>
+				<td>{{patient.age}}</td>
+				<td>{{patient.mobileNo}}</td>
+				<td>{{patient.gender}}</td>
+				</tr>
+			</tbody>
+	</table>
+	
+<!-- Doctors list -->
+	<table ng-show="Dlist">
+			<thead>
+				<tr>
+				<th>Full Name</th>
+				<th>Age</th>
+				<th>Specialization</th>
+				<th>Gender</th>
+				</tr>
+			</thead>
+			<tbody ng-repeat="doctor in doctors">
+				<tr>
+				<td>{{doctor.fullName}}</td>
+				<td>{{doctor.age}}</td>
+				<td>{{doctor.specialization}}</td>
+				<td>{{doctor.gender}}</td>
+				</tr>
+			</tbody>
+	</table>
+		
+</form>

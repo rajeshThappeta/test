@@ -1,0 +1,30 @@
+<form style="text-align:center" class="row" ng-hide="x" name="myForm">
+
+	<strong><h3><p>Patient Registration Details</p></h3></strong><br>
+
+	User Name:<input type="text" ng-model="patient.userName" required>
+
+    Password:<input type="password" ng-model="patient.password" required>
+
+    Full Name:<input type="text" ng-model="patient.fullName" required>
+
+    Mobile Number:<br><input type="number" ng-model="patient.mobileNo" required ng-minlength="10" ng-maxlength="10"><br>
+
+    Disease:<select ng-model="patient.disease" required>
+    	<option  value="Cardialogy" required>Cardialogy</option>
+    	<option  value="Dermatology" required>Dermatology</option>
+    	<option  value="Gastroenterology" required>Gastroenterology</option>
+    	<option  value="Gynecology"required>Gynecology</option>
+    	<option  value="Neurology" required>Neurology</option>
+    	<option  value="Oncology" required>Oncology</option>
+    	<option  value="Orthopaedics" required>Orthopaedics</option>
+    </select>
+
+    Age:<br><input type="number" ng-model="patient.age" required min=1 max=120><br>
+
+    Gender:<br><input type="radio" ng-model="patient.gender" value="male" required> : male
+    	   <input type="radio" ng-model="patient.gender" value="female" required> : Female<br>
+
+	<button type="submit" ng-click="registration()" ng-disabled="myForm.$invalid">Register</button>
+
+</form>

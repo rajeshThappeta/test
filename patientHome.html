@@ -1,0 +1,30 @@
+<form style="text-align:center">
+	
+	<!-- To see logged in  patient details after clicking the below button-->
+	<button type="submit" ng-click="myProfile()">My Profile</button>
+	<!-- To logout after click the below button-->
+	<button type="submit" ng-click="logout()" >Logout</button>
+	
+	<!-- Prints the logged in patient after My profile button is clicked-->
+	<table ng-show="myDetails" align="center">
+		<thead>
+			<tr>
+				<th>Full name</th>
+				<th>Mobile No</th>
+				<th>Disease</th>
+				<th>Age</th>
+				<th>Gender</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="pt in pt">
+				<td>{{pt.fullName}}</td>
+				<td>{{pt.mobileNo}}</td>
+				<td>{{pt.disease}}</td>
+				<td>{{pt.age}}</td>
+				<td>{{pt.gender}}</td>
+			</tr>
+		</tbody>
+		
+</table>
+</form>
